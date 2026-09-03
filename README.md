@@ -1,4 +1,4 @@
-# FINOVA Blockchain Management Committee — Recruitment Task 1
+# FINOVA Blockchain Management Committee: Recruitment Task 1
 
 ## Approach
 
