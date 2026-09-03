@@ -8,7 +8,7 @@ class Blockchain:
         self.current_transactions = []
         self.chain = []
 
-        # Create the genesis block
+        
         self.new_block(previous_hash='1', proof=100)
 
     def new_block(self, proof, previous_hash=None):
@@ -23,7 +23,7 @@ class Blockchain:
             'previous_hash': previous_hash or self.hash(self.chain[-1]),
         }
 
-        # Reset the current list of transactions
+        
         self.current_transactions = []
 
         self.chain.append(block)
@@ -79,11 +79,11 @@ class Blockchain:
 
 blockchain = Blockchain()
 
-# Add transactions
+
 blockchain.new_transaction("Alice", "Bob", 10)
 blockchain.new_transaction("Bob", "Charlie", 5)
 
-# Mine a new block
+
 proof = blockchain.proof_of_work(blockchain.last_block)
 blockchain.new_block(proof)
 
@@ -91,7 +91,7 @@ blockchain.new_transaction("Charlie", "Dave", 2)
 proof = blockchain.proof_of_work(blockchain.last_block)
 blockchain.new_block(proof)
 
-# Print the blockchain
+
 for block in blockchain.chain:
     print("Block:", block['index'])
     print("Timestamp:", block['timestamp'])
